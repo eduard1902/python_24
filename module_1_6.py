@@ -8,7 +8,7 @@ print(my_dict.get('Александр', 'Таких данных нет'))
 my_dict.update({'Вячеслав': 2005, 'Ольга': 2007})
 print(my_dict)
 print('Удаляемое значение',my_dict['Мария'])
-del my_dict['Мария']
+my_dict.pop('Мария')
 print(my_dict.get('Мария', 'Таких данных нет'))
 print('Измененный словарь:',my_dict)
 print('') #  переход на новую строку
