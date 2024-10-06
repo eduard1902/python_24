@@ -49,8 +49,8 @@ class House:
         return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
-        self.number_of_floors += value
-        return self
+        if isinstance(value, int):
+            return House(self.name,self.number_of_floors + value)
 
     def __iadd__(self, value):
         return self.__add__(value)
