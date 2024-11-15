@@ -12,7 +12,7 @@ class Knight(Thread):
     def run(self):
          print(f'{self.knight_name}, на нас напали!')
          enemies = 100
-         days = 1
+         days = 0
          while enemies > 0:
             time.sleep(1)
             days += 1
