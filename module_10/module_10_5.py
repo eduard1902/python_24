@@ -22,4 +22,3 @@ if __name__ == '__main__':
     with Pool(processes=8) as pool:
         pool.map(read_info, filenames)
     print(datetime.now() - start_time, '(многопроцессный)')
-
