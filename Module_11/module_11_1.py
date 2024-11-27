@@ -55,7 +55,7 @@ else:
 
 
 
-#
+# Чтение табличных данных и вывод суммы продаж
 import pandas as pd
 
 # Чтение данных из ODS
@@ -66,6 +66,6 @@ total_sales = sales_data['Sales'].sum()
 print(f"Общий объем продаж: {total_sales}")
 #
 # # Средняя сумма продаж по регионам
-average_sales_by_region = sales_data.groupby('Region')['Sales'].mean()
+average_sales_by_region = sales_data.groupby(['Region']).agg('mean')
 print(average_sales_by_region)
 
