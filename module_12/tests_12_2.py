@@ -36,5 +36,5 @@ class TournamentTest(unittest.TestCase):
         self.assertEqual(resault[3],"Ник")
 
 
-if __name__ == "--main__":
+if __name__ == "__main__":
     unittest.main()
