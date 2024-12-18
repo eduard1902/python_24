@@ -6,8 +6,6 @@ logging.basicConfig(level=logging.INFO, filemode="w", filename="runner_tests.log
 
 class RunnerTest(unittest.TestCase):
 
-
-
     def test_walk(self):
         try:
             first = Runner("Клод", -5) # speed: 5 (for выполнен успешно)
@@ -15,9 +13,8 @@ class RunnerTest(unittest.TestCase):
                 first.walk()
             self.assertEqual(first.distance, 50, "test_walk выполнен успешно")
             # logging.info('"test_walk" выполнен успешно')
-        except  ValueError as e:
+        except  ValueError:
             logging.warning('Неверная скорость для Runner', exc_info=True)
-
 
     def test_run(self):
         try:
@@ -25,7 +22,7 @@ class RunnerTest(unittest.TestCase):
             for i in range(10):
                 second.run()
             self.assertEqual(second.distance, 100, "test_run выполнен успешно")
-        except TypeError as e :
+        except TypeError:
             logging.warning('Неверный тип данных для объекта Runner', exc_info=True)
 
 
