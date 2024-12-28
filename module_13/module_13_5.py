@@ -78,7 +78,7 @@ async def send_calories(message, state):
 
 @dp.message_handler(text='Информация')
 async def inform(message):
-    await message.answer("Бот поможет расчитать суточный рацион в калориях\n"
+    await message.answer("Бот поможет рассчитать суточный рацион в калориях\n"
                          "для Вашего возраста, роста, веса и пола", reply_markup=kb)
 
 @dp.message_handler(content_types=['text']) # commands=['start']
