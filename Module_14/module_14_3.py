@@ -83,7 +83,7 @@ async def get_buying_list(message: types.Message):
 
 @dp.callback_query_handler(text='product_buying')
 async def send_confirm_message(call):
-    await call.message.answer('Вы успешно приобрели продукт.')
+    await call.message.answer('Вы успешно приобрели продукт!')
     await call.answer()
 
 @dp.message_handler(text=['Рассчитать'])
